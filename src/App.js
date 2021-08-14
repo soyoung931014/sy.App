@@ -1,23 +1,32 @@
 import React from 'react';
 
 
-function Food(props){
+function Food({name, picture}){
 
 
-  return <h1> I like {props.fav}</h1>;
+  return(
+        <div>
+        <h1> I like {name}</h1> 
+         <img src = {picture} />
+         </div>
+  );
 }
+
+const foodILike =[
+
+      {name: "김밥",
+       image: "https://images.app.goo.gl/BuLVMU836FujHefD6" },
+       {name : "떡볶이",
+      image: "https://images.app.goo.gl/2bzvNmbVVWtMt7yP6"  }
+]
+
+
 
 function App() {
    /*component는 보다시피  html을 반환하는 함수야*/  
   return  (<div>   
             <h1>hello</h1>
-            <Food 
-            fav = "kimchi"
-            something = {true}
-            papapa = {["hello",123,true]} />
-           <Food fav= "lamen" />
-           <Food fav= "coffee" />
-           <Food fav= "potato" />
+            {foodILike.map(dish =><Food name = {dish.name} picture = {dish.image} />)}
            </div>
   );
         
