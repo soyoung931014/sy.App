@@ -1,28 +1,21 @@
-import React from 'react';
-import PropTypes from "prop-types"
+import React from "react";
 
-
-function Food({name, picture ,rating}){
-
-
+function App(){
   return(
-        <div>
-        <h1> I like {name}</h1> 
-        <h3>{rating}/5</h3>
-         <img src = {picture} alt = {name} />
-         </div>
-  );
-}
+
+    <div>
+      <h1>hello</h1>
+    </div>
+  )
 
 
 
-
-class App extends React.Component{
-  
-  render(){
-
-    return <h1> I'm a class component</h1>
-
-  }
 }export default App;
+
+
+
+
+
+
+
 
